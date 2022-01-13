@@ -40,9 +40,20 @@ body {
 .list {
   list-style: none;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Logo */
+/*---------------------- Container---------------------- */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+ /* outline: 2px solid tomato; */
+}
+
+/* ----------------------Logo---------------------- */
 
 .logo {
   color: var(--accent-link-color);
@@ -60,19 +71,67 @@ body {
   color: var(--text-decoration-color);
 }
 
-/* navigation for site and client contacts in header  */
+/* -----navigation for site and client contacts in header----*/
 
-.site-nav .site-nav-link {
-  text-decoration: none;
+.main-nav, .container-nav{
+  display: flex;
+  align-items: center;
+}
+
+.container-nav {
+
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
 }
 
 .site-nav-link {
+  display:block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--main-link-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
+/* .site-nav .item {
+  margin-right: 50px;
+} */
+
+/* .site-nav .item:last-child {
+  margin-right: 0;
+} */
+
+/* .site-nav .item:not(:last-child) {
+  margin-right: 50px;
+} */
+
+.site-nav .site-nav-link {
+  text-decoration: none;
+}
+
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.conection {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contact-list .item + .item {
+  margin-left: 50px;
 }
 
 .contact-list .conection:hover,
@@ -91,24 +150,52 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* hero */
+/*---------------------- Header---------------------- */
+.page-header{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1600px;
+  border-bottom:  1px solid var(--primery-text-decoration-color);
+  /* background-color: #ccc; */
+}
+/*---------------------- hero---------------------- */
 
 .hero {
   background: var(--secondary--backgraund--color);
+  /* position: absolute; */
+  width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  text-align: center;
+  /* left: 0px;
+  top: 80px; */
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 40px;
   color: var(--alternative-text-decoration-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  /* position: absolute; */
+  /* width: 696px;
+  height: 120px; */
+  /* left: 452px;
+  top: 280px; */
 }
 
-/* advantage section */
+/* ----------------------advantage section--------------------*/
+
+.advantages-section-list .item + .item  {
+  margin-left: 30px;
+}
 
 .advantages-list-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--text-decoration-color);
   font-weight: 700;
   font-size: 14px;
@@ -118,15 +205,28 @@ body {
 }
 
 .advantages-list-text {
+  margin-top: 0;
+  margin-bottom: 94px;
   color: var(--primery-text-decoration-color);
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.03em;
 }
 
-/* workimg section */
+.advantages-list .list {
+  display: flex;
+}
+
+.advantages-list {
+  /* margin-top: 94px; */
+}
+
+/*---------------------- workimg section--------------------- */
+
 
 .workiтg-section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -134,13 +234,32 @@ body {
   letter-spacing: 0.03em;
 }
 
-/*our team section */
+.working-section-list .item + .item  {
+  margin-left: 30px;
+}
+
+.working-section-list {
+  display: flex;
+}
+
+
+/*----------------------our team section--------------------- */
+
+.team-section-list {
+  display: flex;
+}
+
+.team-section-list .list + .list {
+  margin-left: 30px;
+}
 
 .team-section .text {
   color: var(--primery-text-decoration-color);
 }
 
 .our-team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -149,6 +268,8 @@ body {
 }
 
 .team-section-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -157,22 +278,53 @@ body {
 }
 
 .team-section-text {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.18;
   /* text-align: center; */
   letter-spacing: 0.03em;
 }
-
-/* Portfolio-page */
-
-.windows-portfolio-list {
+.team-section-foto {
+  margin-bottom: 30px;
+  display: block;
 }
+
+/*----------------------Portfolio-page---------------------- */
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.main-portfolio-section{
+  margin-bottom: 94px;
+}
+
+.windows-portfolio-ul {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.windows-portfolio-ul .item + .item {
+  margin-left: 30px;
+} 
 
 .windows-portfolio-link {
   text-decoration: none;
 }
 
 .main-portfolio-heading-h2 {
+  margin-top: 0;
+  margin-bottom: 4px;
   color: var(--main-link-color);
   font-weight: 700;
   font-size: 18px;
@@ -181,17 +333,38 @@ body {
 }
 
 .main-portfolio-prink {
+  margin-top: 0;
+  margin-bottom: 20px;
   color: var(--primery-text-decoration-color);
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
 
-/* Footer */
+.portfolio-section-img {
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* ----------------------Footer---------------------- */
 
 .footer {
   background: var(--secondary--backgraund--color);
   color: var(--alternative-text-decoration-color);
+  width: 1600px;
+  /* height: 252px; */
+  margin: 0 auto;
+/* position: absolute; */
+}
+
+.footer-container {
+  /* width: 1600px;
+  height: 252px;
+  margin-left: auto;
+  margin-right: auto; */
+}
+.footer-container li {
+  display: block;
 }
 
 .footer-contacts .conection {
@@ -199,8 +372,8 @@ body {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
+  /* display: inline-block; */
 }
 
 .footer-contacts .conection:hover,
@@ -217,7 +390,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Button */
+/* ----------------------Button---------------------- */
 
 .button {
   background-color: var(--accent-link-color);
@@ -234,11 +407,26 @@ body {
   color: var(--accent-link-color);
 }
 
-/* filter button */
+/*---------------------- filter button---------------------- */
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.filter .item + .item  {
+  margin-left: 8px;
+}
 
 .filter-button {
   color: var(--main-link-color);
   cursor: pointer;
+  /* position: absolute; */
+width: 130px;
+height: 38px;
+left: 976px;
+top: 174px;
 }
 
 .filter-button:hover,
@@ -247,7 +435,7 @@ body {
   color: var(--alternative-text-decoration-color);
 }
 
-/* Hero button */
+/* ----------------------Hero button---------------------- */
 
 .hero-button {
   color: var(--alternative-text-decoration-color);
@@ -262,6 +450,12 @@ body {
   border: transparent;
   padding: 10px 22px;
   cursor: pointer;
+  min-width: 200px;
+  height: 50px;
+
+  /* position: absolute;
+  left: 700px;
+  top: 430px; */
   /* display: flex;
   align-items: center;
   text-align: center; */
