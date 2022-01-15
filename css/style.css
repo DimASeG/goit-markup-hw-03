@@ -13,7 +13,7 @@ footer rgba(255, 255, 255, 0, 6)*/
 
 :root {
   --secondary--backgraund--color: #2f303a;
-
+  --portfolio-background-color: #F5F4FA;
   --primery-text-decoration-color: #757575;
   --text-decoration-color: #000000;
   --alternative-text-decoration-color: #fff;
@@ -33,6 +33,13 @@ body {
   line-height: 1.7;
 }
 
+h1,
+h2,
+h3,
+p {
+margin: 0;
+}
+
 .link,
 .conection {
   text-decoration: none;
@@ -50,7 +57,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
  /* outline: 2px solid tomato; */
@@ -92,8 +99,8 @@ body {
 
 .site-nav-link {
   display:block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 
   color: var(--main-link-color);
   font-weight: 500;
@@ -129,8 +136,8 @@ body {
 }
 
 .conection {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .contact-list .item + .item {
@@ -156,7 +163,7 @@ body {
 /*---------------------- HEADER---------------------- */
 .page-header{
   margin: 0 auto;
-  width: 1600px;
+  max-width: 1600px;
   border-bottom:  1px solid var(--border-color);
   /* background-color: #ccc; */
 }
@@ -164,8 +171,9 @@ body {
 
 .hero {
   background: var(--secondary--backgraund--color);
-  width: 1600px;
-  margin: 0 auto;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 ;
   text-align: center;
 }
 
@@ -176,6 +184,8 @@ body {
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-top: 200px;
 }
 
 /* ----------------------HERO BUTTON---------------------- */
@@ -193,6 +203,7 @@ body {
   cursor: pointer;
   min-width: 200px;
   height: 50px;
+  margin-top: 30px;
 }
 
 .hero-button:hover,
@@ -233,10 +244,14 @@ body {
 }
 
 .advantages-list {
-  /* margin-top: 94px; */
+  padding-top: 94px;
 }
 
 /*--------------------WORKING SECTION--------------------- */
+
+.working-section {
+  padding-bottom: 114px;
+}
 
 
 .workiтg-section-title {
@@ -260,12 +275,25 @@ body {
 
 /*---------------------OUR TEAM SECTION--------------------- */
 
+.team-section {
+  padding: 94px 0 74px;
+  background: var(--portfolio-background-color);
+}
+
+.team-container {
+}
+
 .team-section-list {
   display: flex;
 }
 
 .team-section-list .list + .list {
   margin-left: 30px;
+}
+
+.team-list-item {
+  border: 1px solid var(--border-color);
+
 }
 
 .team-section .text {
@@ -288,7 +316,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.03em;
 }
 
@@ -297,7 +325,7 @@ body {
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.18;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.03em;
 }
 
@@ -335,9 +363,9 @@ body {
 } 
 
 .windows-portfolio-list {
-  width: 380px;
+  width: 370px;
   border: 1px solid var(--border-color);
-  margin-right: 30px;
+  margin: 0 30px 30px 0;
 }
 
 .windows-portfolio-list:nth-child(3n) {
@@ -349,8 +377,7 @@ body {
 }
 
 .main-portfolio-heading-h2 {
-  margin-top: 0;
-  margin-bottom: 4px;
+  margin: 0 auto 4px 24px;
   color: var(--main-link-color);
   font-weight: 700;
   font-size: 18px;
@@ -359,8 +386,7 @@ body {
 }
 
 .main-portfolio-prink {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0 auto 20px 24px;
   color: var(--primery-text-decoration-color);
   font-size: 16px;
   line-height: 1.87;
@@ -370,6 +396,8 @@ body {
 .portfolio-section-img {
   margin-bottom: 20px;
   display: block;
+  /* max-width: 100%;
+  height: auto */
 }
 
 /*---------------------- FILTER BUTTON---------------------- */
@@ -378,6 +406,7 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 34px;
+  margin-top: 94px;
 }
 
 .filter .item + .item  {
@@ -405,7 +434,7 @@ top: 174px;
 .footer {
   background: var(--secondary--backgraund--color);
   color: var(--alternative-text-decoration-color);
-  width: 1600px;
+  max-width: 1600px;
   /* height: 252px; */
   margin: 0 auto;
 /* position: absolute; */
