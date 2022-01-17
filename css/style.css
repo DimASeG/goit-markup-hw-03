@@ -159,7 +159,6 @@ img {
 
 .hero {
   background: var(--secondary--backgraund--color);
-  max-width: 1600px; 
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -170,7 +169,6 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -280,6 +278,7 @@ img {
 .team-presection {
   padding:30px 0;
   border: 1px solid var(--border-color);
+  border-top: none;
 }
 
 .team-section .text {
@@ -345,6 +344,7 @@ img {
 .portfolio-presection {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
+  border-top: none;
 }
 
 .main-portfolio-heading-h2 {
@@ -411,7 +411,6 @@ img {
 .footer-container li {
   display: block;
 }
-
 
 .conection {
   color: var(--footer-contact-text-color);
