@@ -65,6 +65,19 @@ img {
   min-width: 100%;
   height: auto;
 }
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 /* ------------------------LOGO--------------------------- */
 
 .logo {
@@ -220,7 +233,7 @@ img {
 .advantages-list-text {
   color: var(--primery-text-decoration-color);
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
@@ -303,19 +316,6 @@ img {
 
 /*----------------------PORTFOLIO PAGE---------------------- */
 
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .main-portfolio-section{
   margin-bottom: 94px;
 }
@@ -381,16 +381,14 @@ img {
 
 .filter-button {
   color: var(--main-link-color);
+  background-color: var(--portfolio-background-color);
   cursor: pointer;
-  width: 130px;
-  height: 38px;
-  left: 976px;
-  top: 174px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   border: none;
   border-radius: 4px;
+  padding: 6px 22px;
 }
 
 .filter-button:hover,
@@ -408,9 +406,11 @@ img {
   color: var(--alternative-text-decoration-color);
 }
 
+
 .footer-container li {
   display: block;
 }
+
 
 .conection {
   color: var(--footer-contact-text-color);
@@ -420,6 +420,11 @@ img {
   letter-spacing: 0.03em;
   padding: 9px 0;
 }
+
+.footer-contact-map {
+  color: var(--alternative-text-decoration-color);
+}
+
 
 .footer-contacts .conection:hover,
 .footer-contacts .conection:focus {
@@ -433,6 +438,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin: 20px 0 0;
 }
 
 /* ----------------------BUTTON---------------------- */
